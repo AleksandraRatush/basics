@@ -11,26 +11,30 @@ public class CashbackHackServiceTest {
 
     @Test
     public void remainWithAmountDivisibleAboveBoundary() {
-        int remain = cashbackHackService.remain(2000);
-        assertEquals(remain, 0);
+        int actual = cashbackHackService.remain(2000);
+        int expected = 0;
+        assertEquals(expected, actual);
     }
 
     @Test
     public void remainWithAmountNotDivisibleAboveBoundary() {
-        int remain = cashbackHackService.remain(2324);
-        assertEquals(remain, 676);
+        int actual = cashbackHackService.remain(2324);
+        int expected = 676;
+        assertEquals(expected, actual);
     }
 
     @Test
     public void remainWithNotDivisibleAmountLessBoundary() {
-        int remain = cashbackHackService.remain(99);
-        assertEquals(remain, 901);
+        int actual = cashbackHackService.remain(99);
+        int expected = 901;
+        assertEquals(expected, actual);
     }
 
     @Test
     public void remainWithAmountEqualsBoundary() {
-        int remain = cashbackHackService.remain(1000);
-        assertEquals(remain, 0);
+        int actual = cashbackHackService.remain(1000);
+        int expected = 0;
+        assertEquals(expected, actual);
     }
 
 
